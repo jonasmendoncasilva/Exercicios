@@ -1,0 +1,57 @@
+package entities;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+public class Order {
+
+	private Date moment;
+	private String status;
+	
+	List<OrderItem> items = new ArrayList<OrderItem>();
+
+	public Order() {
+	}
+
+	public Order(Date moment, String status) {
+		this.moment = moment;
+		this.status = status;
+	}
+
+	public Date getMoment() {
+		return moment;
+	}
+
+	public void setMoment(Date moment) {
+		this.moment = moment;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	public List<OrderItem> getItems() {
+		return items;
+	}
+	
+	public void addItem(OrderItem item) {
+		items.add(item);
+	}
+
+	public void removeItem(OrderItem item) {
+		items.remove(item);
+	}
+
+	public double total(OrderItem item) {
+		double sum=0;
+		for(OrderItem o:items) {
+			sum = sum + o.subTotal();
+		}
+		return sum;
+	}
+}

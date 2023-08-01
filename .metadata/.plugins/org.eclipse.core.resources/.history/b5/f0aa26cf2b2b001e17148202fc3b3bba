@@ -1,0 +1,47 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+	
+	Scanner sc = new Scanner (System.in);
+	
+
+	int a, b,c;
+	
+	a = sc.nextInt();
+	b = sc.nextInt();
+	
+	
+	if (a>b) {
+		
+		c=(24-a+b);
+		if (c<24){
+		System.out.println("O JOGO DUROU"+c+"HORAS");
+		
+		}
+		else {
+			System.out.println("O JOGO DUROU 24 HORAS");
+		}
+	}
+	
+	else if (a==b) {
+		System.out.println("O JOGO DUROU 24 HORAS");
+		
+	}
+	else if (b>a) {
+		c=(24-b+a);
+		if (c<24){
+			System.out.println("O JOGO DUROU"+c+"HORAS");
+			
+			}
+			else {
+				System.out.println("O JOGO DUROU 24 HORAS");
+			}
+		
+	}
+	
+	sc.close();
+	}
+}

@@ -1,0 +1,27 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+	
+	Scanner sc = new Scanner (System.in);
+	
+	
+	double n, h, s, a;
+	
+	Locale.setDefault(Locale.US);
+	n=sc.nextDouble();
+	Locale.setDefault(Locale.US);
+	h=sc.nextDouble();
+	Locale.setDefault(Locale.US);
+	s=sc.nextDouble();
+	a=h*s;
+	
+	System.out.println("NUMBER: "+n);
+	System.out.printf("SALARY: %.2f",a);
+	
+	
+	sc.close();
+	}
+}

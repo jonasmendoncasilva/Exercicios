@@ -1,0 +1,27 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+	
+	Scanner sc = new Scanner (System.in);
+	
+	Locale.setDefault(Locale.US);
+	
+	int c1, c2;
+	double n1, n2, v, v1, v2;
+
+	c1 = sc.nextInt();
+	n1 = sc.nextInt();
+	v1 = sc.nextDouble();
+	c2 = sc.nextInt();
+	n2 = sc.nextInt();
+	v2 = sc.nextDouble();
+	
+	v = (v1*n1) + (v2*n2);
+	System.out.printf("TOTAL A PAGAR É:%.2f",v);
+	
+	sc.close();
+	}
+}
