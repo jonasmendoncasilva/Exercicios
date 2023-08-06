@@ -35,7 +35,4 @@ public class Employee {
 	public void setSalary(Double salary) {
 		this.salary = salary;
 	}
-	
-	
-	
 }
