@@ -48,7 +48,7 @@ public class Main {
 			}
 			
 			double salarys = list.stream()
-					.filter(p -> p.getName().equals("M"))
+					.filter(p -> p.getName().startsWith("M"))
 					.map(p -> p.getSalary())
 					.reduce(0.0, (x,y) -> x+y);
 					
